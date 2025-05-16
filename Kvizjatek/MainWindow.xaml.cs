@@ -22,21 +22,9 @@ namespace Kvizjatek
 			InitializeComponent();
 		}
 
+		int kerdesId;
+        Random rand = new Random();
 		List<Kerdeskezel> kerdesek = new List<Kerdeskezel>();
-        List<string> valaszok = new List<string>();
-        private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			string kerdes = "";
-
-
-			for (int i = 0; i < kerdesek.Count; i++)
-			{
-				kerdes = kerdesek[i].Split(";")[0];
-
-			}
-
-			Kerdes.Text = kerdes;
-		}
 
 
 		private void kviz_Loaded(object sender, RoutedEventArgs e)
@@ -44,19 +32,27 @@ namespace Kvizjatek
             string[] betolt = File.ReadAllLines("kerdes.txt", Encoding.UTF8);
             for (int i = 1; i < betolt.Length; i++)
             {
-                kerdesek.Add(new Kerdeskezel();
+                kerdesek.Add(new Kerdeskezel(betolt[i]));
 
             }
-				
-			for (int i = 0; i < kerdesek.Count(); i++)
-			{
-				valaszok.Add(kerdesek[i].Split(";")[1]);
-			}
+			kerdesId = rand.Next(kerdesek.Count);
 
-            Random rand = new Random();
 
-			valasz1.Content = kerdesek[0];
-			valasz2.Content = kerdesek[1];
+			var keveres = kerdesek[kerdesId].randomValasz();
+			Kerdes.Text = kerdesek[kerdesId].kerdes;
+
+			valasz1.Content = keveres[0];
+			valasz2.Content = keveres[1];
+            valasz3.Content = keveres[2];
+            valasz4.Content = keveres[3];
+
+
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

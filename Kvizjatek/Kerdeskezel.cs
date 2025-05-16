@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Xml.Schema;
 
 namespace Kvizjatek
@@ -28,5 +29,31 @@ namespace Kvizjatek
             this.helyesvalasz = vag[5];
             this.penz = Convert.ToInt32(vag[6]);
         }
+
+        public List <string> randomValasz()
+        {
+            Random rand = new Random();
+            List<string> valaszok = new List<string>();
+
+            valaszok.Add(this.valasz1);
+            valaszok.Add(this.valasz2);
+            valaszok.Add(this.valasz3);
+            valaszok.Add(this.valasz4);
+
+            int n = valaszok.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rand.Next(n + 1);
+                string value = valaszok[k];
+                valaszok[k] = valaszok[n];
+                valaszok[n] = value;
+            }
+
+            return valaszok;
+
+
+        }
+
     }
 }

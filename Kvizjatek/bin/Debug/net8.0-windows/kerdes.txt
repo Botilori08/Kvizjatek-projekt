@@ -1,2 +1,2 @@
 kérdés;válasz1;válasz2;válasz3;válasz4;helyesválasz;pénz
-kérdés;kutya;macska;ló;kaméleon;kaméleon;10000
+Melyik állat természetes élőhelye az esőerdő?;kutya;macska;ló;kaméleon;kaméleon;10000
