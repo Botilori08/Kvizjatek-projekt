@@ -55,5 +55,13 @@ namespace Kvizjatek
 
         }
 
+        public bool helyesEavalasz(string tipp)
+        {
+
+            return tipp == this.helyesvalasz;
+        }
+
+
+
     }
 }

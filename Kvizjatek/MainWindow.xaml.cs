@@ -25,7 +25,7 @@ namespace Kvizjatek
 		int kerdesId;
         Random rand = new Random();
 		List<Kerdeskezel> kerdesek = new List<Kerdeskezel>();
-
+        int eddigiPenz;
 
 		private void kviz_Loaded(object sender, RoutedEventArgs e)
         {
@@ -46,14 +46,47 @@ namespace Kvizjatek
             valasz3.Content = keveres[2];
             valasz4.Content = keveres[3];
 
-
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+			List <string> gombokNevei = new List<string>();
+
+			gombokNevei.Add("valasz1");
+            gombokNevei.Add("valasz2");
+            gombokNevei.Add("valasz3");
+            gombokNevei.Add("valasz4");
+
+            if(kerdesek[kerdesId].helyesEavalasz(((Button)sender).Content.ToString()))
+            {
+                eddigiPenz = kerdesek[kerdesId].penz;
+            }
+
+            gombSzinez(valasz1, kerdesek[kerdesId].helyesvalasz);
+            gombSzinez(valasz2, kerdesek[kerdesId].helyesvalasz);
+            gombSzinez(valasz3, kerdesek[kerdesId].helyesvalasz);
+            gombSzinez(valasz4, kerdesek[kerdesId].helyesvalasz);
+
+            
+
+
         }
+
+        private void gombSzinez(Button gomb,string helyesvalasz)
+        {
+
+            penz.Text = eddigiPenz.ToString();
+
+            if (gomb.Content.ToString() == helyesvalasz)
+            {
+                gomb.Background = Brushes.Green;
+            }
+            else
+            {
+                gomb.Background= Brushes.Red;
+            }
+        }
+        
     }
 }
