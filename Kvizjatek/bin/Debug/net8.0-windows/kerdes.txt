@@ -1,2 +1,4 @@
 kérdés;válasz1;válasz2;válasz3;válasz4;helyesválasz;pénz
 Melyik állat természetes élőhelye az esőerdő?;kutya;macska;ló;kaméleon;kaméleon;10000
+A Waterloonál elszenvedett francia vereséget követően, hová száműzték Napóleont 1815-ben?;Korzika-szigetére;Szent Ilona-szigetére;Borneo szigetére;Málta szigetére;Szent Ilona-szigetére;20000
+Melyik Ausztria és Magyarország közös tava?;Gébárti-tó;Abért-tó;Fertő tó;Balaton;Fertő tó;30000

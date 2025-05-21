@@ -67,8 +67,8 @@ namespace Kvizjatek
             gombSzinez(valasz2, kerdesek[kerdesId].helyesvalasz);
             gombSzinez(valasz3, kerdesek[kerdesId].helyesvalasz);
             gombSzinez(valasz4, kerdesek[kerdesId].helyesvalasz);
-
             
+            kerdesId = rand.Next(kerdesek.Count);
 
 
         }
@@ -81,11 +81,16 @@ namespace Kvizjatek
             if (gomb.Content.ToString() == helyesvalasz)
             {
                 gomb.Background = Brushes.Green;
+                //label.Content = "A válaszod helyes!";
+                //label.Foreground = Brushes.Green;
             }
             else
             {
                 gomb.Background= Brushes.Red;
+                //label.Content = "A válaszod helytelen!";
+                //label.Foreground = Brushes.Red;
             }
+
         }
         
     }

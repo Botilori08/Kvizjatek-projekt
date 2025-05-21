@@ -13,10 +13,11 @@
                     <TextBlock x:Name="Kerdes" HorizontalAlignment="Left" Margin="28,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="85" Width="447" FontSize="24" Text=""/>
                     <Button x:Name="valasz1" Content="" HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Center" Height="58" Width="229" Click="Button_Click" FontSize="24"/>
                     <Button x:Name="valasz2" Content="" HorizontalAlignment="Left" Margin="439,0,0,0" VerticalAlignment="Center" Height="58" Width="229" Click="Button_Click" FontSize="24"/>
-                    <Button x:Name="valasz3" Content="" HorizontalAlignment="Left" Margin="110,284,0,0" VerticalAlignment="Top" Height="58" Width="229" Click="Button_Click" FontSize="24"/>
-                    <Button x:Name="valasz4" Content="" HorizontalAlignment="Left" Margin="439,284,0,0" VerticalAlignment="Top" Height="58" Width="229" Click="Button_Click" FontSize="24"/>
+                    <Button x:Name="valasz3" Content="" HorizontalAlignment="Left" Margin="110,274,0,0" VerticalAlignment="Top" Height="58" Width="229" Click="Button_Click" FontSize="24"/>
+                    <Button x:Name="valasz4" Content="" HorizontalAlignment="Left" Margin="439,274,0,0" VerticalAlignment="Top" Height="58" Width="229" Click="Button_Click" FontSize="24"/>
                     <TextBlock x:Name="penz" HorizontalAlignment="Left" Margin="480,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="247" FontSize="24"><Run Language="hu-hu" Text="0"/></TextBlock>
                     <TextBlock x:Name="penz_Copy" HorizontalAlignment="Left" Margin="732,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="63" FontSize="24"><Run Language="hu-hu" Text="Ft"/></TextBlock>
+                    <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="252,357,0,0" VerticalAlignment="Top" Width="256"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Beállítások">
